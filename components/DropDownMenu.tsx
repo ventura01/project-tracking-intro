@@ -28,12 +28,12 @@ type Props = {}
 
 const DropDownMenu = (props: DropdownProps) => {
   return (
-    <nav className="z-50 pt-16 absolute bg-white w-3/4 shadow-xl top-20 justify-center flex md:hidden">
+    <nav className="z-50 pt-16 absolute bg-white w-3/4 shadow-xl right-10 top-20 justify-center flex md:hidden">
       <div className="flex flex-col text-center gap-y-4">
         {links.map((link) => (
           <Link href={`${link.route}`} key={link.name}>
             <p
-              className={`${barlowCondensed.className} text-veryDarkBlue font-semibold uppercase `}
+              className={`${barlowCondensed.className} text-veryDarkBlue font-semibold uppercase`}
             >
               {link.name}
             </p>

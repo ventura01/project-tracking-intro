@@ -1,21 +1,20 @@
 import Link from "next/link";
 import React from "react";
 import ActionBtn from "./ActionBtn";
-import { Barlow_Condensed,Barlow } from "next/font/google";
+import { Barlow_Condensed, Barlow } from "next/font/google";
 
 const barlow = Barlow({
-    subsets: ["latin"],
-    weight: ["400", "700"],
-  });
-  const barlowCondensed = Barlow_Condensed({
-    subsets: ["latin"],
-    weight: ["400", "700"],
-  });
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export type LinkProps = {
   name: string;
   route: string;
-  
 };
 
 export const links: LinkProps[] = [
@@ -31,7 +30,7 @@ const Navbar = (props: LinkProps) => {
         {links.map((link) => (
           <Link href={`${link.route}`} key={link.name}>
             <p
-              className={`${barlowCondensed.className} text-veryDarkBlue font-semibold text-sm uppercase `}
+              className={`${barlowCondensed.className} text-veryDarkBlue font-semibold text-sm uppercase hover:text-grayishBlue`}
             >
               {link.name}
             </p>
